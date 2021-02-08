@@ -6,7 +6,7 @@
 - [x] Once logged in users must be able to send and receive messages.
 - [x] It has only one channel/room and all the users subscribed will have access to the only available channel
 
-The system sends to all the users a weekly emails:
+The system sends to all the users a weekly emails: (see apps/jobs/weekly_stats_job.rb)
 - [x] how many messages were sent and received in the last week
 - [x] the total number of messages received since the user has sent his last message
 
