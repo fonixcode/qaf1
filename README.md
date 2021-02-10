@@ -1,6 +1,6 @@
 # QA Test
 
-## This is an application implementing chat.
+## This is an application implementing a chat.
 
 - [x] Users must be able to create an account providing a valid email address.
 - [x] Once logged in users must be able to send and receive messages.
