@@ -1,12 +1,12 @@
-# Web Chat
+# QA Test
 
-## This is an application implementing web chat.
+## This is an application implementing a chat.
 
 - [x] Users must be able to create an account providing a valid email address.
 - [x] Once logged in users must be able to send and receive messages.
 - [x] It has only one channel/room and all the users subscribed will have access to the only available channel
 
-The system sends to all the users a weekly emails:
+The system sends to all the users a weekly emails: (see apps/jobs/weekly_stats_job.rb)
 - [x] how many messages were sent and received in the last week
 - [x] the total number of messages received since the user has sent his last message
 
@@ -16,8 +16,8 @@ The system sends to all the users a weekly emails:
 2. `gem install bundler`
 3. `bundle install`
 4. `cp .env .env.development`
-5. Add necessary variables to `.env.development` file
-6. `bundle exec rails db:create RAILS_ENV=development`
+5. `bundle exec rails db:create RAILS_ENV=development`
+6. `bundle exec rails db:migrate RAILS_ENV=development`
 7. `rails server`
 
 # Run
@@ -28,8 +28,6 @@ You need to run 3 processes
 3. `bundle exec sidekiq`
 
 # Dependencies
-
-- postgresql
 - redis
 
 ## Development dependencies
@@ -40,7 +38,9 @@ You need to run 3 processes
 ## Setup
 
 1. `cp .env .env.test`
-2. Add necessary variables to `.env.test` file
+2. `bundle exec rails db:create RAILS_ENV=test`
+3. `bundle exec rails db:migrate RAILS_ENV=test`
+
 
 ## Run
 
