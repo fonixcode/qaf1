@@ -16,8 +16,8 @@ The system sends to all the users a weekly emails: (see apps/jobs/weekly_stats_j
 2. `gem install bundler`
 3. `bundle install`
 4. `cp .env .env.development`
-5. Add necessary variables to `.env.development` file
-6. `bundle exec rails db:create RAILS_ENV=development`
+5. `bundle exec rails db:create RAILS_ENV=development`
+6. `bundle exec rails db:migrate RAILS_ENV=development`
 7. `rails server`
 
 # Run
@@ -28,8 +28,6 @@ You need to run 3 processes
 3. `bundle exec sidekiq`
 
 # Dependencies
-
-- postgresql
 - redis
 
 ## Development dependencies
@@ -40,7 +38,9 @@ You need to run 3 processes
 ## Setup
 
 1. `cp .env .env.test`
-2. Add necessary variables to `.env.test` file
+2. `bundle exec rails db:create RAILS_ENV=test`
+3. `bundle exec rails db:migrate RAILS_ENV=test`
+
 
 ## Run
 
