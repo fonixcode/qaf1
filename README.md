@@ -20,15 +20,16 @@ The system sends to all the users a weekly emails: (see apps/jobs/weekly_stats_j
 6. `bundle exec rails db:migrate RAILS_ENV=development`
 7. `rails server`
 
+
+# Dependencies
+- redis-server (redis-server must be runing on the default redis port to run sidekiq)
+
 # Run
 
 You need to run 3 processes
 1. `rails server`
 2. `./bin/webpack-dev-server`
 3. `bundle exec sidekiq`
-
-# Dependencies
-- redis
 
 ## Development dependencies
 - mailcatcher
