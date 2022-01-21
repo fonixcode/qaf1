@@ -7,6 +7,8 @@ class MessagesController < ApplicationController
     message = current_chat.messages.new(user: current_user, content: permitted_params[:content])
 
     broadcast_notifications(message) if message.save
+
+    head :no_content
   end
 
   private
@@ -16,6 +18,6 @@ class MessagesController < ApplicationController
   end
 
   def broadcast_notifications(message)
-    ::NewMessageJob.perform_later(message.id)
+    ::NewMessageJob.perform_now(message.id)
   end
 end
