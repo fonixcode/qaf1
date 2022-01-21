@@ -5,6 +5,12 @@ const scrollChatDown = () => {
 
 window.onload = () => {
   scrollChatDown();
+  
+  document.querySelector('.chat-new-message-form form').onsubmit = e => {
+     e.target.submit();
+     e.target.reset();
+     return false;
+  };
 }
 
 export { scrollChatDown };
